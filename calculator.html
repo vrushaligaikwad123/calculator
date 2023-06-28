@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Calculator
+        </title>
+        <style>
+           
+            .head{
+                margin top: 15px ;
+                padding: 10px;
+                color: white;
+            
+            }
+             .Calculator{
+                background-color: #1f1d1d;
+                width: 300px;
+                height: 350px; 
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 10px;
+                margin-top: 50px;
+             }
+             .screen{
+               
+                width: 250px;
+                height: 30px;
+                margin-left: 20px;
+                margin-right: 20px;
+                font-size:25px ;
+                padding: 5px;
+                background-color: #ebebe01;
+                
+             }
+             
+             .btn-row{
+                display: flex;
+                margin-top: 15px;
+                justify-content: space-evenly;
+              }
+              
+             .btns{
+                  height: 40px;
+                  width: 40px;
+                  font-size: 20px;
+                  background-color:  #ffff66;
+                  border-radius: 5px;
+                  cursor: pointer;
+                 
+             }
+             .btns:hover{
+                  border-radius: 10px;
+                  font-size: 30px;
+                  box-shadow: 3px 3px 3px 3px #0000ff;
+                
+             }
+             .tomato{
+                background-color: aqua;
+             }
+        </style>
+    </head>
+    <body>
+        <div class="Calculator">
+            <p class="head"> <i>RTC</i></p>
+            <input type="text" class="screen">
+           
+                <div class="btn-row">
+                <input type="button" value="1" class="btns">
+                <input type="button" value="2" class="btns">
+                <input type="button" value="3" class="btns">
+                <input type="button" value="+" class="btns tomato">
+                </div>
+                <div class="btn-row">
+                    <input type="button" value="4" class="btns">
+                    <input type="button" value="5" class="btns">
+                    <input type="button" value="6" class="btns">
+                    <input type="button" value="-" class="btns tomato">
+                    </div>
+                    <div class="btn-row">
+                        <input type="button" value="7" class="btns">
+                        <input type="button" value="8" class="btns">
+                        <input type="button" value="9" class="btns">
+                        <input type="button" value="X" class="btns tomato">
+                        </div>
+                        <div class="btn-row">
+                            <input type="button" value="0" class="btns">
+                            <input type="button" value="/" class="btns tomato">
+                            <input type="button" value="." class="btns tomato">
+                            <input type="button" value="=" class="btns tomato">
+                            </div>
+                         </div>
+        </div>
+    </body>
+</html>
