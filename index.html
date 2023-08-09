@@ -62,33 +62,52 @@
     <body>
         <div class="Calculator">
             <p class="head"> <i>RTC</i></p>
-            <input type="text" class="screen">
+            <input type="text" class="screen" id="input">
            
                 <div class="btn-row">
-                <input type="button" value="1" class="btns">
-                <input type="button" value="2" class="btns">
-                <input type="button" value="3" class="btns">
-                <input type="button" value="+" class="btns tomato">
+                <input type="button" value="1" class="btns" onclick="keypress('1')">
+                <input type="button" value="2" class="btns" onclick="keypress('2')">
+                <input type="button" value="3" class="btns" onclick="keypress('3')">
+                <input type="button" value="+" class="btns tomato" onclick="keypress('+')">
                 </div>
                 <div class="btn-row">
-                    <input type="button" value="4" class="btns">
-                    <input type="button" value="5" class="btns">
-                    <input type="button" value="6" class="btns">
-                    <input type="button" value="-" class="btns tomato">
+                    <input type="button" value="4" class="btns" onclick="keypress('4')">
+                    <input type="button" value="5" class="btns" onclick="keypress('5')">
+                    <input type="button" value="6" class="btns" onclick="keypress('6')">
+                    <input type="button" value="-" class="btns tomato" onclick="keypress('-')">
                     </div>
                     <div class="btn-row">
-                        <input type="button" value="7" class="btns">
-                        <input type="button" value="8" class="btns">
-                        <input type="button" value="9" class="btns">
-                        <input type="button" value="X" class="btns tomato">
+                        <input type="button" value="7" class="btns" onclick="keypress('7')">
+                        <input type="button" value="8" class="btns" onclick="keypress('8')">
+                        <input type="button" value="9" class="btns" onclick="keypress('9')">
+                        <input type="button" value="X" class="btns tomato" onclick="keypress('*')">
                         </div>
                         <div class="btn-row">
-                            <input type="button" value="0" class="btns">
-                            <input type="button" value="/" class="btns tomato">
-                            <input type="button" value="." class="btns tomato">
-                            <input type="button" value="=" class="btns tomato">
+                            <input type="button" value="0" class="btns" onclick="keypress('0')">
+                            <input type="button" value="/" class="btns tomato" onclick="keypress('/')">
+                            <input type="button" value="c" class="btns tomato" onclick="keypress('c')">
+                            <input type="button" value="=" class="btns tomato" onclick="keypress('=')">
                             </div>
                          </div>
         </div>
+
+        <script>
+            function keypress(key)
+            {
+                const inputscreen = document.getElementById('input');
+                if(key == '=')
+                    {
+                        inputscreen.value = eval(inputscreen.value);
+                    }
+                    else if(key == 'c')
+                    {
+                        inputscreen.value = '';
+                    }
+                else 
+                    {
+                        inputscreen.value += key;
+                    } 
+            }
+            </script>
     </body>
 </html>
